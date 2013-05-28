@@ -1,0 +1,20 @@
+C:\Users\bero\Documents\Visual Studio 2012\Projects\autoskola\autoskola\obj\Debug\Model.xml
+C:\Users\bero\Documents\Visual Studio 2012\Projects\autoskola\autoskola\obj\Debug\refactor.xml
+C:\Users\bero\Documents\Visual Studio 2012\Projects\autoskola\autoskola\obj\Debug\postdeploy.sql
+C:\Users\bero\Documents\Visual Studio 2012\Projects\autoskola\autoskola\obj\Debug\predeploy.sql
+C:\Users\bero\Documents\Visual Studio 2012\Projects\autoskola\autoskola\bin\Debug\pi2014grgicakdb.dacpac
+C:\Users\bero\Documents\Visual Studio 2012\Projects\autoskola\autoskola\bin\Debug\pi2014grgicakdb_Create.sql
+C:\Users\bero\Documents\Visual Studio 2012\Projects\autoskola\autoskola\bin\Debug\pi2014grgicak.dll
+C:\Users\bero\Documents\Visual Studio 2012\Projects\autoskola\autoskola\bin\Debug\pi2014grgicak.pdb
+C:\Users\bero\Documents\Visual Studio 2012\Projects\autoskola\autoskola\obj\Debug\pi2014grgicak.dll
+C:\Users\bero\Documents\Visual Studio 2012\Projects\autoskola\autoskola\obj\Debug\pi2014grgicak.pdb
+C:\Users\bero\Documents\GitHub\pi\autoskolaBaza\autoskola\bin\Debug\pi2014grgicakdb.dacpac
+C:\Users\bero\Documents\GitHub\pi\autoskolaBaza\autoskola\bin\Debug\pi2014grgicakdb_Create.sql
+C:\Users\bero\Documents\GitHub\pi\autoskolaBaza\autoskola\bin\Debug\pi2014grgicak.dll
+C:\Users\bero\Documents\GitHub\pi\autoskolaBaza\autoskola\bin\Debug\pi2014grgicak.pdb
+C:\Users\bero\Documents\GitHub\pi\autoskolaBaza\autoskola\obj\Debug\pi2014grgicak.dll
+C:\Users\bero\Documents\GitHub\pi\autoskolaBaza\autoskola\obj\Debug\pi2014grgicak.pdb
+C:\Users\bero\Documents\GitHub\pi\autoskolaBaza\autoskola\obj\Debug\Model.xml
+C:\Users\bero\Documents\GitHub\pi\autoskolaBaza\autoskola\obj\Debug\refactor.xml
+C:\Users\bero\Documents\GitHub\pi\autoskolaBaza\autoskola\obj\Debug\postdeploy.sql
+C:\Users\bero\Documents\GitHub\pi\autoskolaBaza\autoskola\obj\Debug\predeploy.sql
