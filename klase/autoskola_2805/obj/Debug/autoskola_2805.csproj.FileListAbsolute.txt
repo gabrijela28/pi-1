@@ -1,0 +1,4 @@
+c:\users\matej\documents\visual studio 2012\Projects\autoskola_2805\autoskola_2805\bin\Debug\autoskola_2805.exe.config
+c:\users\matej\documents\visual studio 2012\Projects\autoskola_2805\autoskola_2805\obj\Debug\autoskola_2805.csprojResolveAssemblyReference.cache
+c:\users\matej\documents\visual studio 2012\Projects\autoskola_2805\autoskola_2805\obj\Debug\autoskola_2805.Properties.Resources.resources
+c:\users\matej\documents\visual studio 2012\Projects\autoskola_2805\autoskola_2805\obj\Debug\autoskola_2805.csproj.GenerateResource.Cache

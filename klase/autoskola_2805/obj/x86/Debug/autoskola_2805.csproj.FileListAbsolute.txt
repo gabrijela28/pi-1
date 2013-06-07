@@ -1,0 +1,20 @@
+C:\Users\Matej\Documents\Visual Studio 2012\Projects\autoskola_2805\autoskola_2805\bin\x86\Debug\autoskola_2805.exe.config
+C:\Users\Matej\Documents\Visual Studio 2012\Projects\autoskola_2805\autoskola_2805\obj\x86\Debug\autoskola_2805.csprojResolveAssemblyReference.cache
+C:\Users\Matej\Documents\Visual Studio 2012\Projects\autoskola_2805\autoskola_2805\obj\x86\Debug\autoskola_2805.Properties.Resources.resources
+C:\Users\Matej\Documents\Visual Studio 2012\Projects\autoskola_2805\autoskola_2805\obj\x86\Debug\autoskola_2805.csproj.GenerateResource.Cache
+C:\Users\Matej\Documents\Visual Studio 2012\Projects\autoskola_2805\autoskola_2805\bin\x86\Debug\autoskola_2805.exe
+C:\Users\Matej\Documents\Visual Studio 2012\Projects\autoskola_2805\autoskola_2805\bin\x86\Debug\autoskola_2805.pdb
+C:\Users\Matej\Documents\Visual Studio 2012\Projects\autoskola_2805\autoskola_2805\bin\x86\Debug\System.Data.SQLite.dll
+C:\Users\Matej\Documents\Visual Studio 2012\Projects\autoskola_2805\autoskola_2805\bin\x86\Debug\System.Data.SQLite.xml
+C:\Users\Matej\Documents\Visual Studio 2012\Projects\autoskola_2805\autoskola_2805\obj\x86\Debug\autoskola_2805.exe
+C:\Users\Matej\Documents\Visual Studio 2012\Projects\autoskola_2805\autoskola_2805\obj\x86\Debug\autoskola_2805.pdb
+C:\Users\bero\Desktop\autoskola_2805\autoskola_2805\bin\x86\Debug\autoskola_2805.exe.config
+C:\Users\bero\Desktop\autoskola_2805\autoskola_2805\obj\x86\Debug\autoskola_2805.exe
+C:\Users\bero\Desktop\autoskola_2805\autoskola_2805\obj\x86\Debug\autoskola_2805.pdb
+C:\Users\bero\Desktop\autoskola_2805\autoskola_2805\bin\x86\Debug\autoskola_2805.exe
+C:\Users\bero\Desktop\autoskola_2805\autoskola_2805\bin\x86\Debug\autoskola_2805.pdb
+C:\Users\bero\Desktop\autoskola_2805\autoskola_2805\bin\x86\Debug\System.Data.SQLite.dll
+C:\Users\bero\Desktop\autoskola_2805\autoskola_2805\bin\x86\Debug\System.Data.SQLite.xml
+C:\Users\bero\Desktop\autoskola_2805\autoskola_2805\obj\x86\Debug\autoskola_2805.csprojResolveAssemblyReference.cache
+C:\Users\bero\Desktop\autoskola_2805\autoskola_2805\obj\x86\Debug\autoskola_2805.Properties.Resources.resources
+C:\Users\bero\Desktop\autoskola_2805\autoskola_2805\obj\x86\Debug\autoskola_2805.csproj.GenerateResource.Cache
