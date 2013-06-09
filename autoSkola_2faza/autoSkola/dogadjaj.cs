@@ -5,6 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+// za debug!
+using System.Windows.Forms;
+
 namespace autoSkola
 {
     class dogadjaj
@@ -13,6 +16,7 @@ namespace autoSkola
         public int kreirao { get; set; }
         public string napomena { get; set; }
         public DateTime datum { get; set; }
+
         public dogadjaj(DbDataReader dr)
         {
             if (dr != null)
@@ -20,6 +24,7 @@ namespace autoSkola
                 ID_dogadjaj = int.Parse(dr["ID_dogadjaj"].ToString());
                 kreirao = int.Parse(dr["kreirao"].ToString());
                 napomena = dr["napomena"].ToString();
+                MessageBox.Show(dr["datum"].ToString());
                 datum = DateTime.Parse(dr["datum"].ToString());
             }
 
