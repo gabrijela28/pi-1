@@ -68,3 +68,9 @@ C:\Users\bero\Desktop\autoSkola_1faza\autoSkola\obj\Debug\autoSkola_ucenik.cspro
 C:\Users\Matej\Documents\Visual Studio 2012\Projects\autoSkola_1faza\autoSkola\obj\Debug\autoSkola.formUciteljStat.resources
 C:\Users\Matej\Documents\Visual Studio 2012\Projects\autoSkola_1faza\autoSkola\bin\Debug\System.Data.SQLite.dll
 C:\Users\Matej\Documents\Visual Studio 2012\Projects\autoSkola_1faza\autoSkola\bin\Debug\System.Data.SQLite.xml
+C:\Users\bero\Documents\GitHub\pi\autoSkola_2faza\autoSkola\bin\Debug\autoSkola.exe.config
+C:\Users\bero\Documents\GitHub\pi\autoSkola_2faza\autoSkola\obj\Debug\Interop.AcroPDFLib.dll
+C:\Users\bero\Documents\GitHub\pi\autoSkola_2faza\autoSkola\obj\Debug\AxInterop.AcroPDFLib.dll
+C:\Users\bero\Documents\GitHub\pi\autoSkola_2faza\autoSkola\obj\Debug\autoSkola_ucenik.csproj.ResolveComReference.cache
+C:\Users\bero\Documents\GitHub\pi\autoSkola_2faza\autoSkola\obj\Debug\autoSkola.exe
+C:\Users\bero\Documents\GitHub\pi\autoSkola_2faza\autoSkola\obj\Debug\autoSkola.pdb

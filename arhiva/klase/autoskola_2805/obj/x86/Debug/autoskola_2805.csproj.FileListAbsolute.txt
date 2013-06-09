@@ -18,3 +18,6 @@ C:\Users\bero\Desktop\autoskola_2805\autoskola_2805\bin\x86\Debug\System.Data.SQ
 C:\Users\bero\Desktop\autoskola_2805\autoskola_2805\obj\x86\Debug\autoskola_2805.csprojResolveAssemblyReference.cache
 C:\Users\bero\Desktop\autoskola_2805\autoskola_2805\obj\x86\Debug\autoskola_2805.Properties.Resources.resources
 C:\Users\bero\Desktop\autoskola_2805\autoskola_2805\obj\x86\Debug\autoskola_2805.csproj.GenerateResource.Cache
+C:\Users\bero\Documents\GitHub\pi\klase\autoskola_2805\bin\x86\Debug\autoskola_2805.exe.config
+C:\Users\bero\Documents\GitHub\pi\klase\autoskola_2805\obj\x86\Debug\autoskola_2805.exe
+C:\Users\bero\Documents\GitHub\pi\klase\autoskola_2805\obj\x86\Debug\autoskola_2805.pdb
