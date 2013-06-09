@@ -16,17 +16,18 @@ namespace autoSkola
         {
             InitializeComponent();
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnPrijava_Click(object sender, EventArgs e)
         {
             korisnik Korisnik = new korisnik();
             string korisnikTip = Korisnik.Provjera(txtKorIme.Text, txtLozinka.Text);
-            MessageBox.Show(korisnikTip);
+            if (korisnikTip == "Učenik")
+            {
+                var podaci =new data(txtKorIme.Text, txtLozinka.Text);
+                for (int i = 0; i < podaci.Korisnik.Count; i++)
+                {
+                    MessageBox.Show(podaci.Korisnik[i].korisnicko_ime);  
+                }
+            }
         }
     }
 }

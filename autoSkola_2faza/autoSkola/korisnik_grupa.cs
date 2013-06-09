@@ -11,7 +11,7 @@ namespace autoSkola
     {
         public int ID_grupa { get; set; }
         public int ID_korisnik { get; set; }
-        public void korisnik_ispit(DbDataReader dr)
+        public korisnik_grupa(DbDataReader dr)
         {
             if (dr != null)
             {

@@ -14,7 +14,7 @@ namespace autoSkola
         public string tekst { get; set; }
         public bool tocno { get; set; }
         public string srcOdgovor { get; set; }
-        public void odogovor(DbDataReader dr)
+        public odgovor(DbDataReader dr)
         {
             if (dr != null)
             {

@@ -14,6 +14,13 @@ namespace autoSkola
         [STAThread]
         static void Main()
         {
+            System.Threading.Thread front;
+            front = new System.Threading.Thread(Front);
+            front.Start();
+
+        }
+        static void Front()
+        {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new formPrijava());

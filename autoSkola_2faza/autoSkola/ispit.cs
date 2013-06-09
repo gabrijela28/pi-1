@@ -14,7 +14,7 @@ namespace autoSkola
         public DateTime datum { get; set; }
         public string napomena { get; set; }
         public DateTime trajanje { get; set; }
-        public void odogovor(DbDataReader dr)
+        public ispit(DbDataReader dr)
         {
             if (dr != null)
             {
@@ -29,7 +29,7 @@ namespace autoSkola
         public int Spremi()
         {
             string sqlUpit = "";
-            if (ID_ispit == 0)//tTuple sam stao
+            if (ID_ispit == 0)
             {
                 sqlUpit = "INSERT INTO ispit (ID_ispit,ID_grupa,datum,napomena,trajanje) VALUES (default, " + ID_grupa + ",'" + datum + "','" + napomena + "','" + trajanje + "')";
             }

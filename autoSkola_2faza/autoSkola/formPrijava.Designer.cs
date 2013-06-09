@@ -43,7 +43,6 @@
             this.lblKorIme.Size = new System.Drawing.Size(81, 13);
             this.lblKorIme.TabIndex = 0;
             this.lblKorIme.Text = "Korisničko ime: ";
-            this.lblKorIme.Click += new System.EventHandler(this.label1_Click);
             // 
             // lblLozinka
             // 

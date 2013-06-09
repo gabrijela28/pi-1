@@ -12,7 +12,7 @@ namespace autoSkola
         public int ID_korisnik_ispit { get; set; }
         public int ID_korisnik { get; set; }
         public int ID_ispit { get; set; }
-        public void odogovor(DbDataReader dr)
+        public korisnik_ispit(DbDataReader dr)
         {
             if (dr != null)
             {

@@ -11,7 +11,7 @@ namespace autoSkola
     {
         public int ID_korisnikTip { get; set; }
         public string naziv { get; set; }
-        public void korinkTip(DbDataReader dr)
+        public korisnikTip(DbDataReader dr)
         {
             if (dr != null)
             {

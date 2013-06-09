@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="baza.cs" />
     <Compile Include="cjelina.cs" />
+    <Compile Include="data.cs" />
     <Compile Include="dogadjaj.cs" />
     <Compile Include="formUcenikC1Materijali.cs">
       <SubType>Form</SubType>

@@ -22,10 +22,7 @@ namespace autoSkola
         public string mail { get; set; }
         public string telefon { get; set; }
         public int ID_korisnikTip { get; set; }
-
-        public korisnik()
-        {
-        }
+        public korisnik() { }
         public korisnik(DbDataReader dr)
         {
             if (dr != null)

@@ -13,7 +13,7 @@ namespace autoSkola
         public int ID_cjelina { get; set; }
         public string opis { get; set; }
         public string srcMaterijal { get; set; }
-        public void odogovor(DbDataReader dr)
+        public materijal(DbDataReader dr)
         {
             if (dr != null)
             {
