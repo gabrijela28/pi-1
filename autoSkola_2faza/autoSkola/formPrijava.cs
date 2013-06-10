@@ -21,7 +21,7 @@ namespace autoSkola
             korisnik Korisnik = new korisnik();
             string korisnikTip = Korisnik.Provjera(txtKorIme.Text, txtLozinka.Text);
             var podaci =new data(txtKorIme.Text, txtLozinka.Text);
-            MessageBox.Show(podaci.Korisnik[0].korisnicko_ime); 
+            MessageBox.Show(podaci.Korisnik[0].korisnicko_ime.ToString()); 
         }
     }
 }

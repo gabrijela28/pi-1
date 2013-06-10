@@ -18,11 +18,12 @@ namespace autoSkola
         {
             if (dr != null)
             {
-                ID_cjelina = int.Parse(dr["ID_cjelina"].ToString());
+                //komentari su tu jel mi kreten baca grešku
+                //ID_cjelina = int.Parse(dr["ID_cjelina"].ToString());
                 ID_predmet = int.Parse(dr["ID_predmet"].ToString());
                 naziv = dr["naziv"].ToString();
                 opis = dr["opis"].ToString();
-                bodovi = float.Parse(dr["bodovi"].ToString());
+                //bodovi = float.Parse(dr["bodovi"].ToString());
             }
 
         }
