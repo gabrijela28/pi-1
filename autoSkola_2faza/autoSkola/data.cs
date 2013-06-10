@@ -304,7 +304,7 @@ namespace autoSkola
                 reader = baza.Instanca.DohvatiDataReader(sqlUpit);
                 while (reader.Read())
                 {
-                    Cjelina.Add(new cjelina(reader));
+                   Predmet.Add(new predmet(reader));
                 
                 }
 
@@ -439,7 +439,7 @@ namespace autoSkola
                 reader = baza.Instanca.DohvatiDataReader(sqlUpit);
                 while (reader.Read())
                 {
-                    Cjelina.Add(new cjelina(reader));
+                    Predmet.Add(new predmet(reader));
 
                 }
 
