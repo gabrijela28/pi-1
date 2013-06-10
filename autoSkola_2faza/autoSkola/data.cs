@@ -146,7 +146,7 @@ namespace autoSkola
                 }
                 reader.Close();
 
-                Odgovor_ispit=new List<odgovor_ispit>();;
+                Odgovor_ispit=new List<odgovor_ispit>();
                 sqlUpit = "SELECT odgovor_ispit.ID_korisnik_ispit,odgovor_ispit.ID_odgovor FROM odgovor_ispit,korisnik_ispit WHERE odgovor_ispit.ID_korisnik_ispit=korisnik_ispit.ID_korisnik_ispit and korisnik_ispit.ID_korisnik=" + ID + ";";
                 reader = baza.Instanca.DohvatiDataReader(sqlUpit);
                 while (reader.Read())
@@ -155,7 +155,7 @@ namespace autoSkola
                 }
                 reader.Close();
 
-                Pitanja=new List<pitanja>();;
+                Pitanja=new List<pitanja>();
                 sqlUpit = "SELECT pitanja.ID_pitanja,pitanja.ID_cjelina,pitanja.tekst,pitanja.srcPitanja,pitanja.bodovi FROM pitanja,grupa,korisnik_grupa WHERE pitanja.ID_cjelina=grupa.ID_cjelina and grupa.ID_grupa=korisnik_grupa.ID_grupa and korisnik_grupa.ID_korisnik=" + ID + ";";
                 reader = baza.Instanca.DohvatiDataReader(sqlUpit);
                 while (reader.Read())
@@ -164,12 +164,12 @@ namespace autoSkola
                 }
                 reader.Close();
 
-                Predmet=new List<predmet>();;
+                Predmet=new List<predmet>();
                 sqlUpit = "SELECT predmet.ID_predmet,predmet.naziv,predmet.opis FROM predmet,cjelina,grupa,korisnik_grupa WHERE predmet.ID_predmet=cjelina.ID_predmet and cjelina.ID_cjelina=grupa.ID_cjelina and grupa.ID_grupa=korisnik_grupa.ID_grupa and korisnik_grupa.ID_korisnik=" + ID + ";";
                 reader = baza.Instanca.DohvatiDataReader(sqlUpit);
                 while (reader.Read())
                 {
-                    Cjelina.Add(new cjelina(reader));
+                    Predmet.Add(new predmet(reader));
                 
                 }
 
@@ -281,7 +281,7 @@ namespace autoSkola
                 }
                 reader.Close();
 
-                Odgovor_ispit=new List<odgovor_ispit>();;
+                Odgovor_ispit=new List<odgovor_ispit>();
                 sqlUpit = "SELECT odgovor_ispit.ID_korisnik_ispit,odgovor_ispit.ID_odgovor FROM odgovor_ispit;";
                 reader = baza.Instanca.DohvatiDataReader(sqlUpit);
                 while (reader.Read())
@@ -290,7 +290,7 @@ namespace autoSkola
                 }
                 reader.Close();
 
-                Pitanja=new List<pitanja>();;
+                Pitanja=new List<pitanja>();
                 sqlUpit = "SELECT pitanja.ID_pitanja,pitanja.ID_cjelina,pitanja.tekst,pitanja.srcPitanja,pitanja.bodovi FROM pitanja;";
                 reader = baza.Instanca.DohvatiDataReader(sqlUpit);
                 while (reader.Read())
@@ -299,7 +299,7 @@ namespace autoSkola
                 }
                 reader.Close();
 
-                Predmet=new List<predmet>();;
+                Predmet=new List<predmet>();
                 sqlUpit = "SELECT predmet.ID_predmet,predmet.naziv,predmet.opis FROM predmet;";
                 reader = baza.Instanca.DohvatiDataReader(sqlUpit);
                 while (reader.Read())
@@ -346,7 +346,7 @@ namespace autoSkola
                 reader.Close();
 
                 Ispit = new List<ispit>();
-                sqlUpit = "SELECT ispit.ID_ispit,ispit.ID_grupa,ispit.datum,ispit.napomena,ispit.trajanje FROM ispit,grupa WHERE ispit.ID_grupa=grupa.ID_grupa and grupa.predavac=" + ID + ";";
+                sqlUpit = "SELECT ispit.ID_ispit,ispit.ID_grupa,ispit.datum,ispit.napomena,ispit.trajanje FROM ispit,grupa,cjelina WHERE ispit.ID_grupa=grupa.ID_grupa and grupa.predavac=" + ID + ";";
                 reader = baza.Instanca.DohvatiDataReader(sqlUpit);
                 while (reader.Read())
                 {
