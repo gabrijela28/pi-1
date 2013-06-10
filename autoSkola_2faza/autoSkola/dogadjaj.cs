@@ -15,7 +15,7 @@ namespace autoSkola
         public int ID_dogadjaj { get; set; }
         public int kreirao { get; set; }
         public string napomena { get; set; }
-        public DateTime datum { get; set; }
+        public string datum { get; set; }
 
         public dogadjaj(DbDataReader dr)
         {
@@ -25,7 +25,7 @@ namespace autoSkola
                 kreirao = int.Parse(dr["kreirao"].ToString());
                 napomena = dr["napomena"].ToString();
                 MessageBox.Show(dr["datum"].ToString());
-                datum = DateTime.Parse(dr["datum"].ToString());
+                datum = dr["datum"].ToString();
             }
 
         }

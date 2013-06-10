@@ -10,6 +10,9 @@ using System.Windows.Forms;
 
 namespace autoSkola
 {
+    /// <summary>
+    /// Klasa za povlačenje podataka s servera i pohranu u liste 
+    /// </summary>
     class data
     {
         public List<cjelina> Cjelina { get; set; }
@@ -26,17 +29,21 @@ namespace autoSkola
         public List<odgovor_ispit> Odgovor_ispit { get; set; }
         public List<pitanja> Pitanja { get; set; }
         public List<predmet> Predmet { get; set; }
-        public data(string korIme, string lozinka) { 
+        public data(string korIme, string lozinka) {
+            /// <summary>
+            /// dohvača podatke koje korisnik može pregledavati i pohranjuje ih u listu
+            /// </summary>
             string sqlUpit = "SELECT ID_korisnik FROM korisnik WHERE korisnicko_ime='" + korIme +"' and lozinka='"+lozinka+"';";
             int ID = 0;
-            //znaći vraća mi grešku da već postoji instanca baze koja koristi DohvatiVrijednost
             try
             {
                 ID = (int)baza.Instanca.DohvatiVrijednost(sqlUpit);
             }
             finally{
             }
-            
+            /// <summary>
+            /// postupak se ponavlja za svaku listu
+            /// </summary>
             Cjelina=new List<cjelina>();
             sqlUpit = "SELECT cjelina.ID_cjelina,cjelina.ID_predmet,cjelina.naziv,cjelina.opis,cjelina.bodovi FROM cjelina,grupa,korisnik_grupa WHERE cjelina.ID_cjelina=grupa.ID_cjelina and grupa.ID_grupa=korisnik_grupa.ID_grupa and korisnik_grupa.ID_korisnik=" + ID + ";";
             DbDataReader readerCJ = baza.Instanca.DohvatiDataReader(sqlUpit);
@@ -119,7 +126,7 @@ namespace autoSkola
             readerKT.Close();
 
             Materijal = new List<materijal>();
-            sqlUpit = "SELECT materijal.ID_materijal,materijal.ID_cjelina,materijal.opis,materijal.srcOdgovor FROM materijal,grupa,korisnik_grupa WHERE materijal.ID_cjelina=grupa.ID_cjelina and grupa.ID_grupa=korisnik_grupa.ID_grupa and korisnik_grupa.ID_korisnik=" + ID + ";";
+            sqlUpit = "SELECT materijal.ID_materijal,materijal.ID_cjelina,materijal.opis,materijal.srcMaterijal FROM materijal,grupa,korisnik_grupa WHERE materijal.ID_cjelina=grupa.ID_cjelina and grupa.ID_grupa=korisnik_grupa.ID_grupa and korisnik_grupa.ID_korisnik=" + ID + ";";
             DbDataReader readerMT = baza.Instanca.DohvatiDataReader(sqlUpit);
             while (readerMT.Read())
             {
@@ -128,7 +135,7 @@ namespace autoSkola
             readerMT.Close();
 
             Odgovor=new List<odgovor>();
-            sqlUpit = "SELECT odgovor.ID_odgovor,odgovor.ID_pitanja,odgovor.tekst,odgovor.tocno.srcOdgovor FROM odgovor,pitanja,grupa,korisnik_grupa WHERE odgovor.ID_pitanja=pitanja.ID_pitanja and pitanja.ID_cjelina=grupa.ID_cjelina and grupa.ID_grupa=korisnik_grupa.ID_grupa and korisnik_grupa.ID_korisnik=" + ID + ";";
+            sqlUpit = "SELECT odgovor.ID_odgovor,odgovor.ID_pitanja,odgovor.tekst,odgovor.tocno,odgovor.srcOdgovor FROM odgovor,pitanja,grupa,korisnik_grupa WHERE odgovor.ID_pitanja=pitanja.ID_pitanja and pitanja.ID_cjelina=grupa.ID_cjelina and grupa.ID_grupa=korisnik_grupa.ID_grupa and korisnik_grupa.ID_korisnik=" + ID + ";";
             DbDataReader readerOD = baza.Instanca.DohvatiDataReader(sqlUpit);
             while (readerOD.Read())
             {

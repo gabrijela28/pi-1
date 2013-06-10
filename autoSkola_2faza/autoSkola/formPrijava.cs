@@ -20,14 +20,8 @@ namespace autoSkola
         {
             korisnik Korisnik = new korisnik();
             string korisnikTip = Korisnik.Provjera(txtKorIme.Text, txtLozinka.Text);
-            if (korisnikTip == "Učenik")
-            {
-                var podaci =new data(txtKorIme.Text, txtLozinka.Text);
-                for (int i = 0; i < podaci.Korisnik.Count; i++)
-                {
-                    MessageBox.Show(podaci.Korisnik[i].korisnicko_ime);  
-                }
-            }
+            var podaci =new data(txtKorIme.Text, txtLozinka.Text);
+            MessageBox.Show(podaci.Korisnik[0].korisnicko_ime); 
         }
     }
 }

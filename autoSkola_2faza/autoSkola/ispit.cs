@@ -11,18 +11,18 @@ namespace autoSkola
     {
         public int ID_ispit { get; set; }
         public int ID_grupa { get; set; }
-        public DateTime datum { get; set; }
+        public string datum { get; set; }
         public string napomena { get; set; }
-        public DateTime trajanje { get; set; }
+        public string trajanje { get; set; }
         public ispit(DbDataReader dr)
         {
             if (dr != null)
             {
                 ID_ispit = int.Parse(dr["ID_ispit"].ToString());
                 ID_grupa = int.Parse(dr["ID_grupa"].ToString());
-                datum = DateTime.Parse(dr["datum"].ToString());
+                datum = dr["datum"].ToString();
                 napomena = dr["napomena"].ToString();
-                trajanje = DateTime.Parse(dr["trajanje"].ToString());
+                trajanje = dr["trajanje"].ToString();
             }
 
         }

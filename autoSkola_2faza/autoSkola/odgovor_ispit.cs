@@ -15,8 +15,8 @@ namespace autoSkola
         {
             if (dr != null)
             {
-                ID_korisnik_ispit = int.Parse(dr["ID_odgovor_ispit"].ToString());
-                ID_odgovor = int.Parse(dr["ID_odogovor"].ToString());
+                ID_korisnik_ispit = int.Parse(dr["ID_korisnik_ispit"].ToString());
+                ID_odgovor = int.Parse(dr["ID_odgovor"].ToString());
             }
         }
         public int Spremi()
