@@ -17,7 +17,6 @@ namespace autoSkola
         private string stringKonekcija;
         private SqlConnection konekcija;
 
-
         private baza()
         {
             stringKonekcija = "server=161.53.120.217;database=pi2014grgicakdb;uid=pi2014grgicak;pwd=pi2014grgicak;";
