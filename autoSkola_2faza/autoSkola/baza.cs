@@ -25,11 +25,6 @@ namespace autoSkola
             konekcija.Open();
         }
 
-        ~baza()
-        {
-            konekcija.Close();
-            konekcija = null;
-        }
 
         public static baza Instanca
         {
@@ -55,6 +50,11 @@ namespace autoSkola
             private set { konekcija = value; }
         }
 
+        public void Zatvori() 
+        {
+            konekcija.Close();
+            konekcija = null;
+        }
         /// <summary>
         /// Dohvaća podatke u obliku DataReader objekta na temelju proslijeđenog upita.
         /// </summary>

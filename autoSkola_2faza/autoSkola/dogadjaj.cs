@@ -24,7 +24,7 @@ namespace autoSkola
                 ID_dogadjaj = int.Parse(dr["ID_dogadjaj"].ToString());
                 kreirao = int.Parse(dr["kreirao"].ToString());
                 napomena = dr["napomena"].ToString();
-                MessageBox.Show(dr["datum"].ToString());
+                
                 datum = dr["datum"].ToString();
             }
 

@@ -29,6 +29,9 @@ namespace autoSkola
         public List<odgovor_ispit> Odgovor_ispit { get; set; }
         public List<pitanja> Pitanja { get; set; }
         public List<predmet> Predmet { get; set; }
+
+        public data() { }
+
         public data(string korIme, string lozinka) {
             string sqlUpit = "SELECT ID_korisnik FROM korisnik WHERE korisnicko_ime='" + korIme +"' and lozinka='"+lozinka+"';";
             int ID = 0;
@@ -36,7 +39,9 @@ namespace autoSkola
             {
                 ID = (int)baza.Instanca.DohvatiVrijednost(sqlUpit);
             }
-            finally{
+            catch (Exception)
+            {
+                return;
             }
             korisnik Kor = new korisnik();
             string tip = Kor.Provjera(korIme, lozinka);

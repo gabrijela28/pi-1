@@ -80,6 +80,7 @@
             // 
             // formPrijava
             // 
+            this.AcceptButton = this.btnPrijava;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(299, 150);
@@ -88,9 +89,13 @@
             this.Controls.Add(this.txtKorIme);
             this.Controls.Add(this.lblLozinka);
             this.Controls.Add(this.lblKorIme);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "formPrijava";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Prijava";
+            this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.Load += new System.EventHandler(this.formPrijava_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
