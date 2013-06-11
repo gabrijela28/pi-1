@@ -13,26 +13,200 @@ namespace autoSkola
     /// <summary>
     /// Klasa za povlačenje podataka s servera i pohranu u liste 
     /// </summary>
-    class data
+    public class data
     {
-        public List<cjelina> Cjelina { get; set; }
-        public List<dogadjaj> Dogadjaj { get; set; }
-        public List<grupa> Grupa { get; set; }
-        public List<ispit> Ispit { get; set; }
-        public List<korisnik> Korisnik { get; set; }
-        public List<korisnik_dogadjaj> Korisnik_dogadjaj { get; set; }
-        public List<korisnik_grupa> Korisnik_grupa { get; set; }
-        public List<korisnik_ispit> Korisnik_ispit { get; set; }
-        public List<korisnikTip> KorisnikTip { get; set; }
-        public List<materijal> Materijal { get; set; }
-        public List<odgovor> Odgovor { get; set; }
-        public List<odgovor_ispit> Odgovor_ispit { get; set; }
-        public List<pitanja> Pitanja { get; set; }
-        public List<predmet> Predmet { get; set; }
+        /*
+        private List<cjelina> cjelina;
+        private List<dogadjaj> dogadjaj;
+        private List<grupa> grupa;
+        private List<ispit> ispit;
+        private List<korisnik> korisnik;
+        private List<korisnik_dogadjaj> korisnik_dogadjaj;
+        private List<korisnik_grupa> korisnik_grupa;
+        private List<korisnik_ispit> korisnik_ispit;
+        private List<korisnikTip> korisnikTip;
+        private List<materijal> materijal;
+        private List<odgovor> odgovor;
+        private List<odgovor_ispit> odgovor_ispit;
+        private List<pitanja> pitanja;
+        private List<predmet> predmet;
+        */
+        public List<cjelina> Cjelina;
+        public List<dogadjaj> Dogadjaj;
+        public List<grupa> Grupa;
+        public List<ispit> Ispit;
+        public List<korisnik> Korisnik;
+        public List<korisnik_dogadjaj> Korisnik_dogadjaj;
+        public List<korisnik_grupa> Korisnik_grupa;
+        public List<korisnik_ispit> Korisnik_ispit;
+        public List<korisnikTip> KorisnikTip;
+        public List<materijal> Materijal;
+        public List<odgovor> Odgovor;
+        public List<odgovor_ispit> Odgovor_ispit;
+        public List<pitanja> Pitanja;
+        public List<predmet> Predmet;
+         
+        
+        /*
+        public List<cjelina> Cjelina 
+        {
+            get
+            {
+                return cjelina;
+            }
+            set
+            {
+                cjelina = null;
+            }
+        }
+        public List<dogadjaj> Dogadjaj
+        {
+            get
+            {
+                return dogadjaj;
+            }
+            set
+            {
+
+            }
+        }
+        public List<grupa> Grupa
+        {
+            get
+            {
+                return grupa;
+            }
+            set
+            {
+
+            }
+        }
+        public List<ispit> Ispit
+        {
+            get
+            {
+                return ispit;
+            }
+            set
+            {
+
+            }
+        } 
+        public List<korisnik> Korisnik
+        {
+            get
+            {
+                return korisnik;
+            }
+            set
+            {
+
+            }
+        } 
+        public List<korisnik_dogadjaj> Korisnik_dogadjaj
+        {
+            get
+            {
+                return korisnik_dogadjaj;
+            }
+            set
+            {
+
+            }
+        } 
+        public List<korisnik_grupa> Korisnik_grupa
+        {
+            get
+            {
+                return korisnik_grupa;
+            }
+            set
+            {
+                
+            }
+        } 
+        public List<korisnik_ispit> Korisnik_ispit
+        {
+            get
+            {
+                return korisnik_ispit;
+            }
+            set
+            {
+
+            }
+        } 
+        public List<korisnikTip> KorisnikTip
+        {
+            get
+            {
+                return korisnikTip;
+            }
+            set
+            {
+
+            }
+        } 
+        public List<materijal> Materijal
+        {
+            get
+            {
+                return materijal;
+            }
+            set
+            {
+
+            }
+        } 
+        public List<odgovor> Odgovor
+        {
+            get
+            {
+                return odgovor;
+            }
+            set
+            {
+
+            }
+        } 
+        public List<odgovor_ispit> Odgovor_ispit
+        {
+            get
+            {
+                return odgovor_ispit;
+            }
+            set
+            {
+
+            }
+        } 
+        public List<pitanja> Pitanja
+        {
+            get
+            {
+                return pitanja;
+            }
+            set
+            {
+
+            }
+        }
+        public List<predmet> Predmet
+        {
+            get
+            {
+                return predmet;
+            }
+            set
+            {
+
+            }
+        } 
+        */
 
         public data() { }
 
-        public data(string korIme, string lozinka) {
+        public data(string korIme, string lozinka, string tip) {
             string sqlUpit = "SELECT ID_korisnik FROM korisnik WHERE korisnicko_ime='" + korIme +"' and lozinka='"+lozinka+"';";
             int ID = 0;
             try
@@ -43,11 +217,10 @@ namespace autoSkola
             {
                 return;
             }
-            korisnik Kor = new korisnik();
-            string tip = Kor.Provjera(korIme, lozinka);
+            
             if(tip=="Učenik"){
                 /// <summary>
-                /// dohvača podatke koje korisnik može pregledavati i pohranjuje ih u listu
+                /// dohvaća podatke koje korisnik može pregledavati i pohranjuje ih u listu
                 /// </summary>
                 Cjelina=new List<cjelina>();
                 sqlUpit = "SELECT cjelina.ID_cjelina,cjelina.ID_predmet,cjelina.naziv,cjelina.opis,cjelina.bodovi FROM cjelina,grupa,korisnik_grupa WHERE cjelina.ID_cjelina=grupa.ID_cjelina and grupa.ID_grupa=korisnik_grupa.ID_grupa and korisnik_grupa.ID_korisnik=" + ID + ";";

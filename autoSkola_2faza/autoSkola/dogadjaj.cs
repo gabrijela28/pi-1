@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace autoSkola
 {
-    class dogadjaj
+    public class dogadjaj
     {
         public int ID_dogadjaj { get; set; }
         public int kreirao { get; set; }

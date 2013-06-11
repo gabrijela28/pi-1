@@ -11,7 +11,7 @@ namespace autoSkola
     /// <summary>
     /// klasa Korisnik
     /// </summary>
-    class korisnik
+    public class korisnik
     {
         public int ID_korisnik { get; set; }
         public string ime { get; set; }

@@ -21,22 +21,22 @@ namespace autoSkola
             
             korisnik Korisnik = new korisnik();
             string korisnikTip = Korisnik.Provjera(txtKorIme.Text, txtLozinka.Text);
-            MessageBox.Show(korisnikTip);
+            
 
             var podaci = new data();
             if (korisnikTip == null)
                 MessageBox.Show("Korisnik ne postoji!");
             else
             {
-                podaci = new data(txtKorIme.Text, txtLozinka.Text);
+                podaci = new data(txtKorIme.Text, txtLozinka.Text, korisnikTip);
                 this.Hide();
-                MessageBox.Show("hide() prolazi!");
+                
                 if (korisnikTip == "Učenik")
                 {
-                    formUcenikGlavni frmUcenikGlavni2 = new formUcenikGlavni();
+                    formUcenikGlavni frmUcenikGlavni = new formUcenikGlavni(podaci);
                     
-                    frmUcenikGlavni2.ShowDialog();
-                    MessageBox.Show("dddd22");
+                    frmUcenikGlavni.Show();
+                    
                 }
                 else if (korisnikTip == "Predavač" || korisnikTip == "Instruktor")
                 {
@@ -47,7 +47,7 @@ namespace autoSkola
                  
             }
 
-            //MessageBox.Show(podaci.Korisnik[0].korisnicko_ime.ToString()); 
+            
 
         }
         /// <summary>

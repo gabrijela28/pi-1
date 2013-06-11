@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace autoSkola
 {
-    class odgovor_ispit
+    public class odgovor_ispit
     {
         public int ID_korisnik_ispit { get; set; }
         public int ID_odgovor { get; set; }
