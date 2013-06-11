@@ -43,7 +43,14 @@ namespace autoSkola
                     formUciteljGlavni frmUciteljGlavni = new formUciteljGlavni();
                     frmUciteljGlavni.Show();
                 }
-                
+                ///<summary>
+                /// back je dretva koja periodično provjerava postoje li promjene u klasama i ažurira ih
+                ///</summary>
+                System.Threading.Thread back;
+                var ba = new updateDB();
+                ba.DT = podaci;
+                back = new System.Threading.Thread(ba.startUpdateDB);
+                back.Start();
                  
             }
 

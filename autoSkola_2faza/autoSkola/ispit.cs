@@ -14,6 +14,7 @@ namespace autoSkola
         public string datum { get; set; }
         public string napomena { get; set; }
         public string trajanje { get; set; }
+        public bool promjena { get; set; }
         public ispit(DbDataReader dr)
         {
             if (dr != null)
@@ -23,8 +24,13 @@ namespace autoSkola
                 datum = dr["datum"].ToString();
                 napomena = dr["napomena"].ToString();
                 trajanje = dr["trajanje"].ToString();
+                promjena = false;
             }
 
+        }
+        public void setPromjena()
+        {
+            promjena = true;
         }
         public int Spremi()
         {
@@ -37,10 +43,11 @@ namespace autoSkola
             {
                 sqlUpit = "UPDATE ispit SET ID_grupa = " + ID_grupa
                 + ", datum = '" + datum
-                + "' napomena='" + napomena
-                + "' trajanje='" + trajanje
-                + "'WHERE ID_ispit=" + ID_ispit;
+                + "', napomena='" + napomena
+                + "', trajanje='" + trajanje
+                + "' WHERE ID_ispit=" + ID_ispit;
             }
+            promjena = false;
             return baza.Instanca.IzvrsiUpit(sqlUpit);
         }
     }

@@ -22,6 +22,7 @@ namespace autoSkola
         public string mail { get; set; }
         public string telefon { get; set; }
         public int ID_korisnikTip { get; set; }
+        public bool promjena { get; set; }
         public korisnik() { }
         public korisnik(DbDataReader dr)
         {
@@ -36,8 +37,13 @@ namespace autoSkola
                 mail = dr["mail"].ToString();
                 telefon = dr["telefon"].ToString();
                 ID_korisnikTip = int.Parse(dr["ID_korisnikTip"].ToString());
+                promjena = false;
             }
 
+        }
+        public void setPromjena()
+        {
+            promjena = true;
         }
         public int Spremi()
         {
@@ -49,15 +55,16 @@ namespace autoSkola
             else
             {
                 sqlUpit = "UPDATE korisnik SET ime = '" + ime
-                + "' prezime='" + prezime
-                + "' korsinicko_ime='" + korisnicko_ime
-                + "' lozinka='" + lozinka
-                + "' oib='" + oib
-                + "' mail='" + mail
-                + "' telefon='" + telefon
-                + "' ID_korisnikTip=" + ID_korisnikTip
-                + "WHERE ID_korisnik=" + ID_korisnik;
+                + "', prezime='" + prezime
+                + "', korsinicko_ime='" + korisnicko_ime
+                + "', lozinka='" + lozinka
+                + "', oib='" + oib
+                + "', mail='" + mail
+                + "', telefon='" + telefon
+                + "', ID_korisnikTip=" + ID_korisnikTip
+                + " WHERE ID_korisnik=" + ID_korisnik;
             }
+            promjena = false;
             return baza.Instanca.IzvrsiUpit(sqlUpit);
         }
         /// <summary>

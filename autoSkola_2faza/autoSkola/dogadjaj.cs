@@ -16,7 +16,7 @@ namespace autoSkola
         public int kreirao { get; set; }
         public string napomena { get; set; }
         public string datum { get; set; }
-
+        public bool promjena { get; set; }
         public dogadjaj(DbDataReader dr)
         {
             if (dr != null)
@@ -24,10 +24,14 @@ namespace autoSkola
                 ID_dogadjaj = int.Parse(dr["ID_dogadjaj"].ToString());
                 kreirao = int.Parse(dr["kreirao"].ToString());
                 napomena = dr["napomena"].ToString();
-                
                 datum = dr["datum"].ToString();
+                promjena = false;
             }
 
+        }
+        public void setPromjena()
+        {
+            promjena = true;
         }
         public int Spremi()
         {
@@ -40,9 +44,10 @@ namespace autoSkola
             {
                 sqlUpit = "UPDATE dogadjaj SET kreirao = " + kreirao
                 + ", napomena = '" + napomena
-                + "'datum='" + datum
-                + "'WHERE ID_dogadjaj=" + ID_dogadjaj;
+                + "', datum='" + datum
+                + "' WHERE ID_dogadjaj=" + ID_dogadjaj;
             }
+            promjena = false;
             return baza.Instanca.IzvrsiUpit(sqlUpit);
         }
     }

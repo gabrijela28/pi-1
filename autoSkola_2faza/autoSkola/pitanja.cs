@@ -14,6 +14,7 @@ namespace autoSkola
         public string tekst { get; set; }
         public string srcPitanja { get; set; }
         public float bodovi { get; set; }
+        public bool promjena { get; set; }
         public pitanja(DbDataReader dr)
         {
             if (dr != null)
@@ -23,7 +24,12 @@ namespace autoSkola
                 tekst = dr["tekst"].ToString();
                 srcPitanja = dr["srcPitanja"].ToString();
                 bodovi = float.Parse(dr["bodovi"].ToString());
+                promjena = false;
             }
+        }
+        public void setPromjena()
+        {
+            promjena = true;
         }
         public int Spremi()
         {
@@ -40,6 +46,7 @@ namespace autoSkola
                 + "', bodovi = " + bodovi
                 + " WHERE ID_pitanja = " + ID_pitanja;
             }
+            promjena = false;
             return baza.Instanca.IzvrsiUpit(sqlUpit);
         }
     }

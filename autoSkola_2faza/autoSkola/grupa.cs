@@ -12,6 +12,7 @@ namespace autoSkola
         public int ID_grupa { get; set; }
         public int ID_cjelina { get; set; }
         public int predavac { get; set; }
+        public bool promjena { get; set; }
         public grupa(DbDataReader dr)
         {
             if (dr != null)
@@ -19,8 +20,13 @@ namespace autoSkola
                 ID_grupa = int.Parse(dr["ID_grupa"].ToString());
                 ID_cjelina = int.Parse(dr["ID_cjelina"].ToString());
                 predavac = int.Parse(dr["predavac"].ToString());
+                promjena = false;
             }
 
+        }
+        public void setPromjena()
+        {
+            promjena = true;
         }
         public int Spremi()
         {
@@ -33,8 +39,9 @@ namespace autoSkola
             {
                 sqlUpit = "UPDATE grupa SET ID_cjelina = " + ID_cjelina
                 + ", predavac = " + predavac
-                + "WHERE ID_grupa=" + ID_grupa;
+                + " WHERE ID_grupa=" + ID_grupa;
             }
+            promjena = false;
             return baza.Instanca.IzvrsiUpit(sqlUpit);
         }
     }

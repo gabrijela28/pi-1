@@ -13,6 +13,7 @@ namespace autoSkola
         public int ID_cjelina { get; set; }
         public string opis { get; set; }
         public string srcMaterijal { get; set; }
+        public bool promjena { get; set; }
         public materijal(DbDataReader dr)
         {
             if (dr != null)
@@ -21,8 +22,13 @@ namespace autoSkola
                 ID_cjelina = int.Parse(dr["ID_cjelina"].ToString());
                 opis = dr["opis"].ToString();
                 srcMaterijal = dr["srcMaterijal"].ToString();
+                promjena = false;
             }
 
+        }
+        public void setPromjena()
+        {
+            promjena = true;
         }
         public int Spremi()
         {
@@ -35,9 +41,10 @@ namespace autoSkola
             {
                 sqlUpit = "UPDATE materijal SET ID_cjelina = " + ID_cjelina
                 + ", opis = '" + opis
-                + "'scrMaterijal='" + srcMaterijal
-                + "'WHERE ID_materijal=" + ID_materijal;
+                + "', scrMaterijal='" + srcMaterijal
+                + "' WHERE ID_materijal=" + ID_materijal;
             }
+            promjena = false;
             return baza.Instanca.IzvrsiUpit(sqlUpit);
         }
     }

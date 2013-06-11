@@ -14,6 +14,7 @@ namespace autoSkola
         public string naziv { get; set; }
         public string opis { get; set; }
         public float bodovi { get; set; }
+        public bool promjena { get; set; }
         public cjelina(DbDataReader dr)
         {
             if (dr != null)
@@ -23,8 +24,12 @@ namespace autoSkola
                 naziv = dr["naziv"].ToString();
                 opis = dr["opis"].ToString();
                 bodovi = float.Parse(dr["bodovi"].ToString());
+                promjena = false;
             }
 
+        }
+        public void setPromjena() {
+            promjena = true;
         }
         public int Spremi()
         {
@@ -37,10 +42,11 @@ namespace autoSkola
             {
                 sqlUpit = "UPDATE cjelina SET ID_predmet = " + ID_predmet
                 + ", naziv = '" + naziv
-                + "'opis='" + opis
-                + "' bodovi=" + bodovi
+                + "', opis='" + opis
+                + "', bodovi=" + bodovi
                 + "WHERE ID_cjelina=" + ID_cjelina;
             }
+            promjena = false;
             return baza.Instanca.IzvrsiUpit(sqlUpit);
         }
     }

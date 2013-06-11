@@ -12,6 +12,7 @@ namespace autoSkola
         public int ID_predmet { get; set; }
         public string naziv { get; set; }
         public string opis { get; set; }
+        public bool promjena { get; set; }
         public predmet(DbDataReader dr)
         {
             if (dr != null)
@@ -19,7 +20,12 @@ namespace autoSkola
                 ID_predmet = int.Parse(dr["ID_predmet"].ToString());
                 naziv = dr["naziv"].ToString();
                 opis = dr["opis"].ToString();
+                promjena = false;
             }
+        }
+        public void setPromjena()
+        {
+            promjena = true;
         }
         public int Spremi()
         {
@@ -34,6 +40,7 @@ namespace autoSkola
                 + "', opis = '" + opis
                 + "' WHERE Id = " + ID_predmet;
             }
+            promjena = false;
             return baza.Instanca.IzvrsiUpit(sqlUpit);
         }
     }

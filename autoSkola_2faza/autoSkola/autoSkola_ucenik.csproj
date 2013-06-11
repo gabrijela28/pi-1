@@ -199,6 +199,7 @@
     <Compile Include="predmet.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="updateDB.cs" />
     <EmbeddedResource Include="formUcenikC1Materijali.resx">
       <DependentUpon>formUcenikC1Materijali.cs</DependentUpon>
     </EmbeddedResource>

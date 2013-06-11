@@ -11,13 +11,19 @@ namespace autoSkola
     {
         public int ID_korisnik_ispit { get; set; }
         public int ID_odgovor { get; set; }
+        public bool promjena { get; set; }
         public odgovor_ispit(DbDataReader dr)
         {
             if (dr != null)
             {
                 ID_korisnik_ispit = int.Parse(dr["ID_korisnik_ispit"].ToString());
                 ID_odgovor = int.Parse(dr["ID_odgovor"].ToString());
+                promjena = false;
             }
+        }
+        public void setPromjena()
+        {
+            promjena = true;
         }
         public int Spremi()
         {
@@ -28,8 +34,9 @@ namespace autoSkola
             }
             else
             {
-                sqlUpit = "UPDATE odgovor_ispit SET ID_odgovor=" + ID_odgovor + "WHERE ID_odgovor_ispit=" + ID_korisnik_ispit;
+                sqlUpit = "UPDATE odgovor_ispit SET ID_odgovor=" + ID_odgovor + " WHERE ID_odgovor_ispit=" + ID_korisnik_ispit;
             }
+            promjena = false;
             return baza.Instanca.IzvrsiUpit(sqlUpit);
         }
     }

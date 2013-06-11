@@ -14,6 +14,7 @@ namespace autoSkola
         public string tekst { get; set; }
         public bool tocno { get; set; }
         public string srcOdgovor { get; set; }
+        public bool promjena { get; set; }
         public odgovor(DbDataReader dr)
         {
             if (dr != null)
@@ -23,8 +24,12 @@ namespace autoSkola
                 tekst = dr["tekst"].ToString();
                 tocno = (bool)dr["tocno"];
                 srcOdgovor = dr["srcOdgovor"].ToString();
-
+                promjena = false;
             }
+        }
+        public void setPromjena()
+        {
+            promjena = true;
         }
         public int Spremi()
         {
@@ -37,10 +42,11 @@ namespace autoSkola
             {
                 sqlUpit = "UPDATE odgovor SET ID_pitanja = " + ID_pitanja
                 + ", tekst = '" + tekst
-                + "' tocno = " + tocno
-                + "scrOdgovor='" + srcOdgovor
-                + "'WHERE ID_odgovor=" + ID_odgovor;
+                + "', tocno = " + tocno
+                + ", scrOdgovor='" + srcOdgovor
+                + "' WHERE ID_odgovor=" + ID_odgovor;
             }
+            promjena = false;
             return baza.Instanca.IzvrsiUpit(sqlUpit);
         }
 
