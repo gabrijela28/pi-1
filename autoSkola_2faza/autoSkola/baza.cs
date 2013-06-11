@@ -50,8 +50,14 @@ namespace autoSkola
             private set { konekcija = value; }
         }
 
-        public void Zatvori() 
+        public void Zatvori(data DT)
         {
+            /// <summary>
+            /// pokreče pohranu podataka prije zatvaranja konekcije
+            /// </summary>
+            var ba = new updateDB();
+            ba.DT = DT;
+            ba.saveDB();
             konekcija.Close();
             konekcija = null;
         }

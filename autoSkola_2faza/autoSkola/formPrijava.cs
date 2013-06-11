@@ -12,6 +12,7 @@ namespace autoSkola
 {
     public partial class formPrijava : Form
     {
+        public data podaci;
         public formPrijava()
         {
             InitializeComponent();
@@ -23,7 +24,7 @@ namespace autoSkola
             string korisnikTip = Korisnik.Provjera(txtKorIme.Text, txtLozinka.Text);
             
 
-            var podaci = new data();
+            podaci = new data();
             if (korisnikTip == null)
                 MessageBox.Show("Korisnik ne postoji!");
             else
@@ -47,7 +48,7 @@ namespace autoSkola
                 /// back je dretva koja periodično provjerava postoje li promjene u klasama i ažurira ih
                 ///</summary>
                 System.Threading.Thread back;
-                var ba = new updateDB();
+                updateDB ba = new updateDB();
                 ba.DT = podaci;
                 back = new System.Threading.Thread(ba.startUpdateDB);
                 back.Start();
@@ -65,7 +66,7 @@ namespace autoSkola
         {
             base.OnFormClosing(e);
             if (e.CloseReason == CloseReason.WindowsShutDown) return;
-            baza.Instanca.Zatvori();
+            baza.Instanca.Zatvori(podaci);
         }
 
         private void formPrijava_Load(object sender, EventArgs e)
